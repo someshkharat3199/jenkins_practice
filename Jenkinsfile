@@ -10,6 +10,7 @@ pipeline{
                 DEBUG_FLAGS = '-g'
             }
             steps{
+                echo '${CC}'
                 bat 'dir'
                 echo '${PATH}'
                 echo '${CC}'
