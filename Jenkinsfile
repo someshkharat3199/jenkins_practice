@@ -2,6 +2,7 @@ pipeline{
     agent any
     environment{
         CC = 'clang'
+        PATH = 'C:\\Windows\\System32'
     }
     stages{
         stage('Example'){
