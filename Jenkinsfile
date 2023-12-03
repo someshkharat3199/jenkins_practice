@@ -1,5 +1,3 @@
-#!/usr/bin/env groovy
-
 pipeline{
     agent any
     environment{
@@ -11,7 +9,7 @@ pipeline{
                 DEBUG_FLAGS = '-g'
             }
             steps{
-                powershell 'dir'
+                sh 'printenv'
             }
         }
     }
