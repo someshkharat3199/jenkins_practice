@@ -11,6 +11,7 @@ pipeline{
             }
             steps{
                 bat 'dir'
+                echo '${PATH}'
             }
         }
     }
