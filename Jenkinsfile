@@ -2,7 +2,6 @@ pipeline{
     agent any
     environment{
         CC = 'clang'
-        PATH = 'C:\\Windows\\System32'
     }
     stages{
         stage('Example'){
@@ -10,9 +9,6 @@ pipeline{
                 DEBUG_FLAGS = '-g'
             }
             steps{
-                echo '${CC}'
-                bat 'dir'
-                echo '${PATH}'
                 echo '${CC}'
             }
         }
