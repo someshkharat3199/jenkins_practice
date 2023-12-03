@@ -11,8 +11,8 @@ pipeline{
                 DEBUG_FLAGS = '-g'
             }
             steps{
-                bash 'echo %CC%'
-                bash 'echo %DEBUG_FLAGS%'
+                bash 'echo CC'
+                bash 'echo DEBUG_FLAGS'
             }
         }
     }
