@@ -12,7 +12,7 @@ pipeline{
             steps{
                 bat 'dir'
                 echo '${PATH}'
-                echo '${CC}'
+                echo '${env.CC}'
             }
         }
     }
