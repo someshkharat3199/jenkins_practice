@@ -1,7 +1,18 @@
 #!/usr/bin/env groovy
 
-node {
-    withEnv(["PATH+MAVEN=/bin"]){
-        echo "${PATHMAVEN}"
+pipeline{
+    agent any
+    environment{
+        CC = 'clang'
+    }
+    stages{
+        stage('Example'){
+            environment{
+                DEBUG_FLAGS = '-g'
+            }
+            steps{
+                powershell 'dir env:'
+            }
+        }
     }
 }
