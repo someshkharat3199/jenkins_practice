@@ -11,7 +11,7 @@ pipeline{
                 DEBUG_FLAGS = '-g'
             }
             steps{
-                powershell 'dir'
+               sh 'ls'
             }
         }
     }
