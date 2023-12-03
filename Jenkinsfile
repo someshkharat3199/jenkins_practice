@@ -10,7 +10,7 @@ pipeline{
                 DEBUG_FLAGS = '-g'
             }
             steps{
-                bat 'dir'
+                bat 'env'
             }
         }
     }
