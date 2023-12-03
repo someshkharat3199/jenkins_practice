@@ -11,7 +11,8 @@ pipeline{
                 DEBUG_FLAGS = '-g'
             }
             steps{
-                sh 'printenv'
+                bash 'echo %CC%'
+                bash 'echo %DEBUG_FLAGS'
             }
         }
     }
