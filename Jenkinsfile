@@ -7,6 +7,7 @@ pipeline{
             steps{
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 echo "Stored on workspace ${env.WORKSPACE}"
+                echo "Running machine ${env.NODE_NAME}"
             }
         }
     }
