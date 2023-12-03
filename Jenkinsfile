@@ -1,13 +1,17 @@
-#!/usr/bin/env goovy
+#!/usr/bin/env groovy
 
 pipeline{
     agent any
+    environment{
+        CC = 'clang'
+    }
     stages{
         stage('Example'){
+            environment{
+                DEBUG_FLAGS = '-g'
+            }
             steps{
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                echo "Stored on workspace ${env.WORKSPACE}"
-                echo "Running machine ${env.NODE_NAME}"
+                sh 'printenv'
             }
         }
     }
